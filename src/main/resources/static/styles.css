@@ -1,0 +1,86 @@
+/* Variáveis de estilo */
+:root {
+    --font-family: 'Inter', 'Segoe UI', sans-serif;
+    --color-bg: #f4f6f8;
+    --color-card: #ffffff;
+    --color-border: #e0e0e0;
+    --color-text: #333;
+    --color-muted: #999;
+    --color-accent: #2563eb;
+    --color-accent-hover: #1e40af;
+    --radius: 8px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout base */
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+button {
+    padding: 12px 18px;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Lista de tarefas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: var(--color-card);
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+li:hover {
+    background-color: #f9fafb;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--color-muted);
+}
